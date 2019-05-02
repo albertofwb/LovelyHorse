@@ -11,7 +11,12 @@
 // Windows Header Files
 #include <windows.h>
 
+#define DLL_OUT __declspec(dllexport)
 
 
 // reference additional headers your program requires here
-#include "CommonUtils.h"
+#include <assert.h>
+#include <stdio.h>
+#include <tchar.h>
+
+#include "StringUtils.h"

@@ -1,4 +1,4 @@
 #pragma once
+#include "CommonUtils.h"
 
-
-extern "C" __declspec(dllexport) BOOL ScreenShot(LPCTSTR imgSavePath);
+DLL_IN BOOL ScreenShot(LPCTSTR imgSavePath);

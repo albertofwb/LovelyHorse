@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Win32Functions.h"
 
 HBITMAP GetScreenBmp()
 {
@@ -28,10 +27,10 @@ HBITMAP GetScreenBmp()
 }
 
 
-__declspec(dllexport) BOOL ScreenShot(LPCTSTR imgSavePath)
+DLL_OUT BOOL ScreenShot(LPCTSTR imgSavePath)
 {
 	_ASSERT(imgSavePath != NULL);
-	_ASSERT(_tcsclen(imgSavePath) <= LH_PATH_SIZE);
+	_ASSERT(_tcsclen(imgSavePath) <= LH_MAX_PATH);
 
 	_tprintf(_T("saving screenshot to %s\n"), imgSavePath);
 
